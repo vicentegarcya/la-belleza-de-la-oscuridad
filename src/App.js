@@ -10,7 +10,7 @@ function App() {
           We are currently working on this website.
         </p>
         <p className='link'>
-          In the meantime, you can check <a href="https://www.instagram.com/soygigigonz/" target="_blank" rel="noreferrer">my Instagram</a>
+          In the meantime, you can check <a href="https://www.instagram.com/soyjimenagonz_/" target="_blank" rel="noreferrer">my Instagram</a>
         </p>
       </header>
     </div>
