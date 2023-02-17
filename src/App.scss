@@ -22,10 +22,10 @@
 
 .soon {
   width: 100vw;
-  height: 700px;
+  height: 95vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   text-align: center;
 }
 
@@ -41,51 +41,107 @@
 }
 
 .soon h4 {
-  margin-bottom: 140px;
+  margin-bottom: 0px;
   font-size: 28px;
 }
 
 /* brief */
 
 .brief {
-  width: 70vw;
-  height: 400px;
+  width: 60vw;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   font-size: var(--main-font-size);
-  position: relative;
+  margin-top: -40px;
 }
 
 .brief-text {
-  width: 50%;
-}
-
-.crisalida {
-  width: 220px;
-  height: 220px;
-  margin-left: 230px;
+  width: 46%;
+  margin-bottom: 159px;
+  line-height: 1.6;
 }
 
 .water-women {
-  position: fixed;
-  top: 510px;
+  position: absolute;
+  top: 69vh;
   right: 0;
-  width: 300px;
+  width: 564px;
 }
 
 .water-women-overlay {
-  position: fixed;
-  top: 510px;
+  position: absolute;
+  top: 69vh;
   right: 0;
-  width: 300px;
-  height: 574px;
-  background: linear-gradient(90deg,  rgba(0,0,0, 1) 0%, rgba(116,157,251, 0) 30%)
+  width: 564px;
+  height: 1079px;
+  background: linear-gradient(90deg,  rgba(0,0,0, 1) 0%, rgba(116,157,251, 0) 30%), linear-gradient(0deg,  rgba(0,0,0, 1) 0%, rgba(116,157,251, 0) 20%);
 }
 
+/* journey */
+
+.journey {
+  width: 90vw;
+  display: flex;
+  padding-left: 40px;
+  margin-bottom: 200px;
+}
+
+.journey-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+
+.journey-title-play {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: bold;
+  width: 65%;
+  margin-top: 30px;
+}
+
+.journey-description {
+  font-size: 19px;
+  margin-top: 30px;
+  width: 65%;
+}
+
+.journey a {
+  background: url('../src/images/play-button.png');
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+  background-position: center;
+}
+
+/* intencion */
+
+.intencion {
+  width: 85.5vw;
+  height: 600px;
+  margin-top: 80px;
+}
+
+.mariposa-left {
+  position: absolute;
+  top: 251vh;
+  left: 0;
+}
+
+.intencion-text {
+  text-align: right;
+  font-style: italic;
+  font-size: 30px;
+}
+
+
 @media only screen and (max-width: 768px) {
-  .App-header .link {
-    top: 420px;
-  }
+  
 }
