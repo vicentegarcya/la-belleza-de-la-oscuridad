@@ -1,15 +1,21 @@
 import './App.scss';
 import React from 'react';
-import waterWomen from '../src/images/water-women.jpeg';
 import revelacionImg from '../src/images/1_REVELACION.png';
 import resistirImg from '../src/images/2_RESISTIR.png';
 import rendicionImg from '../src/images/3_RENDICION.png';
 import integracionImg from '../src/images/4_INTEGRACION.png';
 import iluminarImg from '../src/images/5_ILUMINAR.png';
+
+const waterWomen = require('../src/images/water-women.jpeg');
 /* import mariposa from '../src/images/mariposa-left.jpeg'; */
 
 function App() {
   React.useEffect(() => {
+    if(window.innerWidth < 768) {
+      document.querySelectorAll('section').forEach(e => e.classList.add('hidden'));
+      document.querySelector('header').classList.remove('hidden');
+    }
+
     const cursor = document.querySelector('.cursor');
     const moveCursor = (e) => {
       cursor.style.display = 'block';
@@ -36,15 +42,15 @@ function App() {
 
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={darkness} alt="sky darkness with lightnings"></img>
+      <header className="App-header hidden">
+        <img src={waterWomen} alt="sky darkness with lightnings"></img>
         <p>
           We are currently working on this website.
         </p>
         <p className='link'>
-          In the meantime, you can check <a href="https://www.instagram.com/soyjimenagonz_/" target="_blank" rel="noreferrer">my Instagram</a>
+          In the meantime, you can check <a href="https://www.instagram.com/jimenagonzalez.in/" target="_blank" rel="noreferrer">my Instagram</a>
         </p>
-      </header> */}
+      </header>
       <section className='soon'>
         <h5>s o o n</h5>
         <h4>La belleza de la oscuridad</h4>
