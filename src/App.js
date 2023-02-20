@@ -1,12 +1,11 @@
 import './App.scss';
 import React from 'react';
+import waterWomen from '../src/images/water-women.png';
 import revelacionImg from '../src/images/1_REVELACION.png';
 import resistirImg from '../src/images/2_RESISTIR.png';
 import rendicionImg from '../src/images/3_RENDICION.png';
 import integracionImg from '../src/images/4_INTEGRACION.png';
 import iluminarImg from '../src/images/5_ILUMINAR.png';
-
-const waterWomen = require('../src/images/water-women.jpeg');
 /* import mariposa from '../src/images/mariposa-left.jpeg'; */
 
 function App() {
