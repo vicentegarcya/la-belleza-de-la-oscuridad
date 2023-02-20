@@ -8,7 +8,6 @@
 .App {
   width: 100vw;
   background-color: var(--main-bg-color);
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,6 +19,19 @@
 
 .hidden {
   display: none;
+}
+
+.cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  transition: width 0.5s, height 0.5s;
 }
 
 /* soon */
@@ -40,13 +52,14 @@
 .soon h5 {
   margin-bottom: 35px;
   font-weight: normal;
-  letter-spacing: 10px;
+  letter-spacing: 6px;
   font-style: italic;
+  font-size: 14px;
 }
 
 .soon h4 {
   margin-bottom: 0px;
-  font-size: 28px;
+  font-size: 32px;
 }
 
 /* brief */
@@ -63,10 +76,24 @@
 }
 
 .brief-text {
-  width: 46%;
+  width: 42%;
   margin-bottom: 159px;
   line-height: 1.6;
   font-size: 19px;
+  text-align: justify;
+  margin-left: -13%;
+}
+
+.brief-text:nth-child(2) {
+  padding: 120px 0 100px 0;
+  margin-top: -100px;
+  margin-bottom: 80px;
+}
+
+.brief-text:nth-child(2):hover ~ .cursor {
+  width: 74px;
+  height: 74px;
+  transition: width 0.5s, height 0.5s;
 }
 
 .water-women {
@@ -81,7 +108,7 @@
   top: 450px;
   right: 0;
   width: 564px;
-  height: 1079px;
+  height: 1080px;
   background: linear-gradient(90deg,  rgba(0,0,0, 1) 0%, rgba(116,157,251, 0) 30%), linear-gradient(0deg,  rgba(0,0,0, 1) 0%, rgba(116,157,251, 0) 20%);
 }
 
@@ -108,7 +135,7 @@
   justify-content: space-between;
   font-size: 13px;
   font-weight: bold;
-  width: 70%;
+  width: 74%;
   margin-top: 30px;
 }
 
@@ -116,6 +143,7 @@
   font-size: 16px;
   margin-top: 30px;
   width: 72%;
+  text-align: justify;
 }
 
 .journey a {
@@ -129,9 +157,9 @@
 /* intencion */
 
 .intencion {
-  width: 85.5vw;
-  height: 600px;
-  margin-top: 50px;
+  width: 50vw;
+  height: 80px;
+  margin-top: 20px;
   position: relative;
 }
 
@@ -142,9 +170,19 @@
 }
 
 .intencion-text {
-  text-align: right;
+  text-align: center;
   font-style: italic;
-  font-size: 24px;
+  font-size: 16px;
+  color: #c7c7c7;
+  line-height: 0.5;
+}
+
+.jimena {
+  text-align: end;
+  margin-right: 15.5%;
+  font-size: 16px;
+  margin-top: 25px;
+  color: #c7c7c7;
 }
 
 /* footer */
@@ -152,12 +190,82 @@
 footer {
   display: flex;
   font-size: 14px;
-  width: 30%;
-  height: 200px;
+  width: 36%;
+  height: 250px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 50px;
+}
+
+footer a {
+  display: block;
+  background-position: center;
+}
+
+.subscribe-icon {
+  width: 32px;
+  height: 32px;
+  background: url('../src/images/subscribe.png');
+  background-size: 32px 32px;
+}
+
+.instagram-icon {
+  width: 36px;
+  height: 36px;
+  background: url('../src/images/instagram.jpg');
+  background-size: 36px 36px;
+  border-radius: 4px;
+}
+
+.mail-icon {
+  width: 29px;
+  height: 29px;
+  background: url('../src/images/mail.png');
+  background-size: 29px 29px;
+}
+
+.footer-div {
+  position: relative;
+}
+
+footer p {
+  position: absolute;
+  width: 300px;
+  animation: 1.75s anim-lineUp ease-out;
+  top: 30px;
+}
+
+footer .subscribe-icon + p {
+  right: calc(50% - 150px);
+}
+
+footer .instagram-icon + p {
+  width: 330px;
+  right: calc(50% - 168px);
+}
+
+footer .mail-icon + p {
+  top: 24px;
+  right: calc(50% - 236px);
+}
+
+@keyframes anim-lineUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }
 
 @media only screen and (max-width: 768px) {
