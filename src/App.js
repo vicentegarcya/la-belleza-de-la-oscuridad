@@ -10,10 +10,10 @@ import iluminarImg from '../src/images/5_ILUMINAR.png';
 
 function App() {
   React.useEffect(() => {
-    if(window.innerWidth < 768) {
+    /* if(window.innerWidth < 768) {
       document.querySelectorAll('section').forEach(e => e.classList.add('hidden'));
       document.querySelector('header').classList.remove('hidden');
-    }
+    } */
 
     const cursor = document.querySelector('.cursor');
     const moveCursor = (e) => {
@@ -64,50 +64,52 @@ function App() {
         <img className='water-women' src={waterWomen} alt=''></img>
         <div className='water-women-overlay'></div>
       </section>
-      <section className='journey'>
-        <div className='journey-step'>
-          <img className='journey-img' src={revelacionImg} alt=''></img>
-          <div className='journey-title-play'>
-            <p>1. R E V E L A C I Ó N</p>
-            <a href='https://open.spotify.com/playlist/13hrT38xZa6h9MeIdiBMsZ?si=9e9edd0ff0294cb9' target="_blank" rel="noopener noreferrer"> </a>
+      <section className='journey-wrapper'>
+        <div className='journey'>
+          <div className='journey-step'>
+            <img className='journey-img' src={revelacionImg} alt=''></img>
+            <div className='journey-title-play'>
+              <p>1. R E V E L A C I Ó N</p>
+              <a href='https://open.spotify.com/playlist/13hrT38xZa6h9MeIdiBMsZ?si=9e9edd0ff0294cb9' target="_blank" rel="noopener noreferrer"> </a>
+            </div>
+            <p className='journey-description'>Señales que permiten a la sombra emerger del inconsciente a la luz.</p>
           </div>
-          <p className='journey-description'>Señales que permiten a la sombra emerger del inconsciente a la luz.</p>
-        </div>
-        <div className='journey-step'>
-          <img className='journey-img' src={resistirImg} alt=''></img>
-          <div className='journey-title-play'>
-            <p>2. R E S I S T I R</p>
-            <a href='https://open.spotify.com/playlist/3DxAov4zfucFtID7kYDTc9?si=14fefe34eee84242' target="_blank" rel="noopener noreferrer"> </a>
+          <div className='journey-step'>
+            <img className='journey-img' src={resistirImg} alt=''></img>
+            <div className='journey-title-play'>
+              <p>2. R E S I S T I R</p>
+              <a href='https://open.spotify.com/playlist/3DxAov4zfucFtID7kYDTc9?si=14fefe34eee84242' target="_blank" rel="noopener noreferrer"> </a>
+            </div>
+            <p className='journey-description'>La brecha interna provocada por el rechazo de la oscuridad que aun así conecta con la intención de trascenderla.</p>
           </div>
-          <p className='journey-description'>La brecha interna provocada por el rechazo de la oscuridad que aun así conecta con la intención de trascenderla.</p>
-        </div>
-        <div className='journey-step'>
-          <img className='journey-img' src={rendicionImg} alt=''></img>
-          <div className='journey-title-play'>
-            <p>3. R E N D I C I Ó N</p>
-            <a href='https://open.spotify.com/playlist/4VF60a3jUY9tA1p18Ov3Ua?si=19c6454d666a49d1' target="_blank" rel="noopener noreferrer"> </a>
+          <div className='journey-step'>
+            <img className='journey-img' src={rendicionImg} alt=''></img>
+            <div className='journey-title-play'>
+              <p>3. R E N D I C I Ó N</p>
+              <a href='https://open.spotify.com/playlist/4VF60a3jUY9tA1p18Ov3Ua?si=19c6454d666a49d1' target="_blank" rel="noopener noreferrer"> </a>
+            </div>
+            <p className='journey-description'>Soltar el control para permitir que la oscuridad atraviese. Mecerse en amor mientras la sombra purifica.</p>
           </div>
-          <p className='journey-description'>Soltar el control para permitir que la oscuridad atraviese. Mecerse en amor mientras la sombra purifica.</p>
-        </div>
-        <div className='journey-step'>
-          <img className='journey-img' src={integracionImg} alt=''></img>
-          <div className='journey-title-play'>
-            <p>4. I N T E G R A C I Ó N</p>
-            <a href='https://open.spotify.com/playlist/77fNB8OObqPFGYgAQYK476?si=252ca99c3c094393' target="_blank" rel="noopener noreferrer"> </a>
+          <div className='journey-step'>
+            <img className='journey-img' src={integracionImg} alt=''></img>
+            <div className='journey-title-play'>
+              <p>4. I N T E G R A C I Ó N</p>
+              <a href='https://open.spotify.com/playlist/77fNB8OObqPFGYgAQYK476?si=252ca99c3c094393' target="_blank" rel="noopener noreferrer"> </a>
+            </div>
+            <p className='journey-description'>Dejar penetrar los aprendizajes y ganar comprensión del proceso, mientras la esperanza y el agradecimiento emergen.</p>
           </div>
-          <p className='journey-description'>Dejar penetrar los aprendizajes y ganar comprensión del proceso, mientras la esperanza y el agradecimiento emergen.</p>
-        </div>
-        <div className='journey-step'>
-          <img className='journey-img' src={iluminarImg} alt=''></img>
-          <div className='journey-title-play'>
-            <p>5. I L U M I N A R</p>
-            <a href='https://open.spotify.com/playlist/0kYSl5ciF9Jos4rc99rg1i?si=b59c2e7901074152' target="_blank" rel="noopener noreferrer"> </a>
+          <div className='journey-step'>
+            <img className='journey-img' src={iluminarImg} alt=''></img>
+            <div className='journey-title-play'>
+              <p>5. I L U M I N A R</p>
+              <a href='https://open.spotify.com/playlist/0kYSl5ciF9Jos4rc99rg1i?si=b59c2e7901074152' target="_blank" rel="noopener noreferrer"> </a>
+            </div>
+            <p className='journey-description'>Vivir en armonía con la luz auténtica propia, aprendiendo a protegerla y reflejarla en el mundo.</p>
           </div>
-          <p className='journey-description'>Vivir en armonía con la luz auténtica propia, aprendiendo a protegerla y reflejarla en el mundo.</p>
         </div>
       </section>
       <section className='intencion'>
-        <p className='intencion-text'>Que esta creación sea una expresión auténtica de mi ser</p>
+        <p className='intencion-text'>Que esta creación sea una expresión auténtica de mi ser,</p>
         <p className='intencion-text'>que pueda inspirar amor incondicional,</p>
         <p className='intencion-text'>un amor que sostiene el dolor de la transformación,</p>
         <p className='intencion-text'>que invita a la aceptación propia,</p>

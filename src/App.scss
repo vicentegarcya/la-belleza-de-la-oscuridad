@@ -45,7 +45,8 @@
   text-align: center;
 }
 
-.soon h4, .soon h5 {
+.soon h4,
+.soon h5 {
   margin: 0;
 }
 
@@ -90,7 +91,7 @@
   margin-bottom: 80px;
 }
 
-.brief-text:nth-child(2):hover ~ .cursor {
+.brief-text:nth-child(2):hover~.cursor {
   width: 74px;
   height: 74px;
   transition: width 0.5s, height 0.5s;
@@ -109,7 +110,7 @@
   right: 0;
   width: 564px;
   height: 1080px;
-  background: linear-gradient(90deg,  rgba(0,0,0, 1) 0%, rgba(116,157,251, 0) 30%), linear-gradient(0deg,  rgba(0,0,0, 1) 0%, rgba(116,157,251, 0) 20%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(116, 157, 251, 0) 30%), linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(116, 157, 251, 0) 20%);
 }
 
 /* journey */
@@ -236,16 +237,16 @@ footer p {
   top: 30px;
 }
 
-footer .subscribe-icon + p {
+footer .subscribe-icon+p {
   right: calc(50% - 150px);
 }
 
-footer .instagram-icon + p {
+footer .instagram-icon+p {
   width: 330px;
   right: calc(50% - 168px);
 }
 
-footer .mail-icon + p {
+footer .mail-icon+p {
   top: 24px;
   right: calc(50% - 236px);
 }
@@ -255,13 +256,16 @@ footer .mail-icon + p {
     opacity: 0;
     transform: translateY(80%);
   }
+
   20% {
     opacity: 0;
   }
+
   20% {
     opacity: 1;
     transform: translateY(0%);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0%);
@@ -270,16 +274,168 @@ footer .mail-icon + p {
 
 @media only screen and (max-width: 768px) {
   .cursor {
-    display: none;
+    display: none !important;
   }
 
-  .App-header img {
-    width: 300px;
-    margin-left: -35%;
-  }
-
-  .App-header {
-    width: 50%;
+  .soon {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
+  }
+
+  .soon h4 {
+    font-size: 22px;
+  }
+
+  .soon h5 {
+    margin-bottom: 15px;
+  }
+
+  /* brief */
+
+  .brief {
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: var(--main-font-size);
+    margin-top: -30px;
+  }
+
+  .brief-text {
+    margin-bottom: 35px;
+    line-height: 1.4;
+    font-size: 14px;
+    text-align: inherit;
+    margin-left: 4%;
+  }
+
+  .brief-text:nth-child(2) {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 35px;
+  }
+
+  .brief-text:nth-child(3) {
+    width: 80vw;
+  }
+
+  .water-women {
+    top: 650px;
+    width: 204px;
+  }
+
+  .water-women-overlay {
+    top: 650px;
+    width: 204px;
+    height: 392px;
+  }
+
+  /* journey */
+
+  .journey-wrapper {
+    width: 90vw;
+    align-self: flex-start;
+  }
+
+  .journey {
+    width: auto;
+    margin-left: 9%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  .journey-img {
+    margin-left: -25px;
+  }
+
+  .journey-step:nth-child(1)>.journey-img {
+    margin-left: 0;
+  }
+
+  .journey-step {
+    width: 80vw;
+    margin-right: 20px;
+  }
+
+  .journey-step:nth-child(1) {
+    align-items: flex-start;
+  }
+
+  .journey-step:nth-child(2) {
+    margin-left: -7%;
+  }
+
+  .journey-title-play {
+    width: 61vw;
+    margin-top: 10px;
+  }
+
+  .journey-description {
+    width: 60vw;
+  }
+
+    /* Adjusting journey carousel */
+
+  .journey-step:nth-child(4) .journey-img {
+    margin-top: 35px;
+  }
+
+  .journey-step:nth-child(4) .journey-title-play {
+    margin-top: -24px;
+  }
+
+  .journey-step:nth-child(5) .journey-img {
+    margin-top: 25px;
+  }
+
+  .journey-step:nth-child(5) .journey-title-play {
+    margin-top: -14px;
+    width: 53vw;
+    margin-left: -25px;
+  }
+
+  .journey-step:nth-child(5) .journey-description {
+    width: 53vw;
+    margin-left: -25px;
+  }
+
+  /* intencion */
+
+  .intencion {
+    width: 80vw;
+    margin-top: -30px;
+  }
+
+  .intencion-text {
+    line-height: 1;
+  }
+
+  /* footer */
+
+  footer {
+    display: flex;
+    font-size: 14px;
+    width: 36%;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0px;
+    margin-top: 140px;
+  }
+
+  footer a {
+    display: block;
+    background-position: center;
+  }
+
+  footer .subscribe-icon+p {
+    right: calc(50% - 205px);
   }
 }
