@@ -65,6 +65,7 @@ function App() {
         <div className='water-women-overlay'></div>
       </section>
       <section className='journey-wrapper'>
+        <div className='journey-overlay'></div>
         <div className='journey'>
           <div className='journey-step'>
             <img className='journey-img' src={revelacionImg} alt=''></img>

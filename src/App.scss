@@ -155,6 +155,10 @@
   background-position: center;
 }
 
+.journey-overlay {
+  display: none;
+}
+
 /* intencion */
 
 .intencion {
@@ -162,12 +166,6 @@
   height: 80px;
   margin-top: 20px;
   position: relative;
-}
-
-.mariposa-left {
-  position: absolute;
-  top: -110px;
-  left: -110px;
 }
 
 .intencion-text {
@@ -279,7 +277,7 @@ footer .mail-icon+p {
 
   .soon {
     width: 100vw;
-    height: 90vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -304,11 +302,11 @@ footer .mail-icon+p {
     justify-content: flex-start;
     align-items: center;
     font-size: var(--main-font-size);
-    margin-top: -30px;
+    margin-top: -5px;
   }
 
   .brief-text {
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     line-height: 1.4;
     font-size: 14px;
     text-align: inherit;
@@ -318,20 +316,21 @@ footer .mail-icon+p {
   .brief-text:nth-child(2) {
     padding: 0;
     margin-top: 0;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
   }
 
   .brief-text:nth-child(3) {
-    width: 80vw;
+    width: 83vw;
+    text-align: justify;
   }
 
   .water-women {
-    top: 650px;
+    top: 70vh;
     width: 204px;
   }
 
   .water-women-overlay {
-    top: 650px;
+    top: 70vh;
     width: 204px;
     height: 392px;
   }
@@ -341,6 +340,18 @@ footer .mail-icon+p {
   .journey-wrapper {
     width: 90vw;
     align-self: flex-start;
+    position: relative;
+  }
+
+  .journey-overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -2px;
+    width: 25vw;
+    height: 520px;
+    z-index: 1000;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 1) 0%, rgba(116, 157, 251, 0) 60%);
   }
 
   .journey {
