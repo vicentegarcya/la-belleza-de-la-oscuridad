@@ -119,7 +119,7 @@ function App() {
       </section>
       <footer>
         <div className='footer-div'>
-          <a className='subscribe-icon' href='#prueba'> </a>
+          <a className='subscribe-icon' href='https://labellezadelaoscuridad.us21.list-manage.com/subscribe?u=9443f17b4f0305d0d0d2aeedf&id=25483bc169' target="_blank" rel="noopener noreferrer"> </a>
           <p className='hidden'>Recibe un mail cuando el oráculo esté disponible</p>
         </div>
         <div className='footer-div'>
