@@ -6,7 +6,6 @@ import resistirImg from '../src/images/2_RESISTIR.png';
 import rendicionImg from '../src/images/3_RENDICION.png';
 import integracionImg from '../src/images/4_INTEGRACION.png';
 import iluminarImg from '../src/images/5_ILUMINAR.png';
-/* import mariposa from '../src/images/mariposa-left.jpeg'; */
 
 function App() {
   React.useEffect(() => {
@@ -110,6 +109,7 @@ function App() {
         </div>
       </section>
       <section className='intencion'>
+        <a className='saber-mas-btn' href='https://labellezadelaoscuridad.us21.list-manage.com/subscribe?u=9443f17b4f0305d0d0d2aeedf&id=25483bc169' target="_blank" rel="noopener noreferrer"> </a>
         <p className='intencion-text'>Que esta creación sea una expresión auténtica de mi ser,</p>
         <p className='intencion-text'>que pueda inspirar amor incondicional,</p>
         <p className='intencion-text'>un amor que sostiene el dolor de la transformación,</p>

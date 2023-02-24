@@ -118,7 +118,7 @@
 .journey {
   width: 97vw;
   display: flex;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   margin-top: 30px;
 }
 
@@ -163,9 +163,12 @@
 
 .intencion {
   width: 50vw;
-  height: 80px;
-  margin-top: 20px;
+  height: auto;
+  margin-top: 0px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .intencion-text {
@@ -177,11 +180,16 @@
 }
 
 .jimena {
-  text-align: end;
+  align-self: end;
   margin-right: 15.5%;
   font-size: 16px;
   margin-top: 25px;
   color: #c7c7c7;
+}
+
+.saber-mas-btn {
+  width: 200px;
+  margin-bottom: 150px;
 }
 
 /* footer */
@@ -190,7 +198,7 @@ footer {
   display: flex;
   font-size: 14px;
   width: 36%;
-  height: 250px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -427,18 +435,25 @@ footer .mail-icon+p {
     line-height: 1;
   }
 
+  .saber-mas-btn {
+    width: 170px;
+    height: 88px;
+    background: url('../src/images/saber-mas-btn.png');
+    background-size: 170px 88px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
   /* footer */
 
   footer {
     display: flex;
     font-size: 14px;
     width: 36%;
-    height: 240px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 0px;
-    margin-top: 140px;
+    padding-bottom: 30px;
   }
 
   footer a {
