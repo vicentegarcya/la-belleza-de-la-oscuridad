@@ -1,5 +1,5 @@
 import "./App.scss";
-import React from "react";
+import { useEffect, useRef } from "react";
 import card1 from "../src/images/1.jpg";
 import card2 from "../src/images/2.jpg";
 import card3 from "../src/images/3.jpg";
@@ -9,36 +9,62 @@ import card6 from "../src/images/6.jpg";
 import card7 from "../src/images/7.jpg";
 
 function App() {
+  const proximamenteRef = useRef();
+  const explanationRef = useRef();
+  const titleRef = useRef();
+  const creadoresRef = useRef();
+  const cardsRef = useRef();
+
+  useEffect(() => {
+    setTimeout(() => proximamenteRef.current.classList.remove('hidden'), 500);
+    setTimeout(() => titleRef.current.classList.remove('hidden'), 1000);
+    setTimeout(() => {
+      explanationRef.current.querySelectorAll('p').forEach(e => {
+        e.classList.remove('hidden')
+      });
+      creadoresRef.current.classList.remove('hidden');
+    }, 2000);
+    setTimeout(() => cardsRef.current.classList.remove('hidden'), 2500);
+    setTimeout(() => {
+      cardsRef.current.querySelectorAll('.card').forEach((e, index) => {
+          e.classList.remove('hidden');
+      });
+    }, 3500);
+  }, []);
+
   return (
     <div className="App">
-      <div className="proximamente">próximamente</div>
-      <div className="explanation">
-        <p>
+      <div ref={proximamenteRef} className="proximamente hidden">próximamente</div>
+      <div ref={explanationRef} className="explanation">
+        <p className="hidden">
           Un oráculo para quienes no creen en los oráculos, sino en conectar con
           su propia sabiduría interna.
         </p>
-        <p>
-          Para quienes han trascendido la positividad tóxica y se sumergen con
-          valentía en la experiencia completa de la vida.
+        <p className="hidden">
+          Para quienes han trascendido la positividad tóxica y<br></br> se
+          sumergen con valentía en la experiencia de la vida.
         </p>
       </div>
       <div className="title_cards">
-        <div className="cards">
-          <img className="card" src={card1} alt="first card of the deck"></img>
-          <img className="card" src={card2} alt="second card of the deck"></img>
-          <img className="card" src={card3} alt="third card of the deck"></img>
+        <div ref={cardsRef} className="cards hidden">
+          <img className="card hidden" src={card1} alt="first card of the deck"></img>
+          <img className="card hidden" src={card2} alt="second card of the deck"></img>
+          <img className="card hidden" src={card3} alt="third card of the deck"></img>
           <img className="card" src={card4} alt="fourth card of the deck"></img>
-          <img className="card" src={card5} alt="fifth card of the deck"></img>
-          <img className="card" src={card6} alt="sixth card of the deck"></img>
+          <img className="card hidden" src={card5} alt="fifth card of the deck"></img>
+          <img className="card hidden" src={card6} alt="sixth card of the deck"></img>
           <img
-            className="card"
+            className="card hidden"
             src={card7}
             alt="seventh card of the deck"
           ></img>
+          <div className="cards_overlay"></div>
         </div>
-        <div className="title">La belleza<br></br> de la oscuridad</div>
+        <div ref={titleRef} className="title hidden">
+          La belleza<br></br> de la oscuridad
+        </div>
       </div>
-      <div className="creadores_desktop">
+      <div ref={creadoresRef} className="creadores_desktop hidden">
         <p className="supreme">
           Un proyecto del<br></br>ecosistema SPRM BNGS
         </p>
