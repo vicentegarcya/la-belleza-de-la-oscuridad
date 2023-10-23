@@ -372,7 +372,7 @@
     width: 99vw;
     height: 20dvh;
   }
-  
+
   .creadores_desktop > * {
     width: 33%;
   }
@@ -390,8 +390,10 @@
   }
 }
 
-
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .App {
+    height: 100dvh;
+  }
   .proximamente {
     font-size: 3vw;
     letter-spacing: 3.5px;
@@ -484,7 +486,7 @@
     width: 99vw;
     height: 23vw;
   }
-  
+
   .creadores_desktop > * {
     width: 33%;
   }
