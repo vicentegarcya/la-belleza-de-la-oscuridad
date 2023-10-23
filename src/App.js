@@ -24,12 +24,12 @@ function App() {
       });
       creadoresRef.current.classList.remove('hidden');
     }, 2000);
-    setTimeout(() => cardsRef.current.classList.remove('hidden'), 2500);
+    setTimeout(() => cardsRef.current.classList.remove('hidden'), 2000);
     setTimeout(() => {
-      cardsRef.current.querySelectorAll('.card').forEach((e, index) => {
+      cardsRef.current.querySelectorAll('.card').forEach(e => {
           e.classList.remove('hidden');
       });
-    }, 3500);
+    }, 4000);
   }, []);
 
   return (
@@ -81,26 +81,6 @@ function App() {
         <p className="carlos">
           Arte por<br></br>Carlos Fama
         </p>
-      </div>
-      <div className="creadores_mobile">
-        <div>
-          <p className="jimena">JIMENA GONZALEZ</p>
-          <a
-            href="mailto:contacto@labellezadelaoscuridad.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            contacto@labellezadelaoscuridad.com
-          </a>
-        </div>
-        <div>
-          <p className="supreme">
-            Un proyecto <br></br>del ecosistema <br></br>SPRM BNGS
-          </p>
-          <p className="carlos">
-            Arte por<br></br>Carlos Fama
-          </p>
-        </div>
       </div>
     </div>
   );

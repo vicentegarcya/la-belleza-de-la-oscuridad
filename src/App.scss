@@ -85,6 +85,15 @@
   position: relative;
 }
 
+@keyframes appearTitle {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
 .title {
   font-size: 12.35vw;
   font-family: var(--titles-font);
@@ -97,7 +106,7 @@
   left: -1.4vw;
   line-height: 1;
   letter-spacing: -6px;
-  animation: appearTop 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: appearTitle 4s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .cards {
@@ -144,7 +153,7 @@
 }
 .card:nth-child(4) {
   z-index: 4;
-  animation: card4 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: card4 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .card:nth-child(5) {
   z-index: 3;
@@ -188,16 +197,10 @@
 }
 @keyframes card4 {
   0% {
-    transform: scale(0);
-  }
-  50%{
-    transform: scale(0);
-  }
-  80%{
-    transform: scale(1);
+    transform: translateY(200%);
   }
   100% {
-    transform: scale(1);
+    transform: translateY(0);
   }
 }
 @keyframes card5 {
@@ -280,100 +283,225 @@
   margin-left: 2.5vw;
 }
 
-.creadores_mobile {
-  display: none;
-}
-
 @media only screen and (max-width: 768px) {
   .proximamente {
-    margin-top: -120px;
+    font-size: 3vw;
+    letter-spacing: 3.5px;
+    margin-top: 50vw;
+  }
+
+  .title_cards {
+    width: 94vw;
+    height: 56vw;
+    position: relative;
   }
 
   .title {
     width: 90vw;
     font-size: 14vw;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: -30px;
+    margin-top: 0px;
+    margin-bottom: 6px;
     line-height: 1;
+    letter-spacing: -2px;
+    left: -1vw;
   }
 
   .cards {
     width: 100vw;
-    height: 40vh;
-    margin-bottom: 20px;
   }
 
   .card {
     width: 30%;
     border-radius: 10px;
     position: absolute;
+    animation: marginCard 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .card:nth-child(1) {
-    transform: rotate(-9deg) translateX(-80%) scale(0.9);
+    margin-left: 8vw;
   }
   .card:nth-child(2) {
-    transform: rotate(-6deg) translateX(-55%) scale(0.95);
+    margin-left: 4vw;
   }
   .card:nth-child(3) {
-    transform: rotate(-3deg) translateX(-30%);
+    margin-left: 1vw;
   }
+
   .card:nth-child(5) {
-    transform: rotate(3deg) translateX(30%);
+    margin-right: 6vw;
   }
   .card:nth-child(6) {
-    transform: rotate(6deg) translateX(55%) scale(0.95);
+    margin-right: 12vw;
   }
   .card:nth-child(7) {
-    transform: rotate(9deg) translateX(80%) scale(0.9);
+    margin-right: 20vw;
+  }
+
+  @keyframes marginCard {
+    0% {
+      margin: 0;
+    }
+    99% {
+      margin: 0;
+    }
+    100% {
+      margin: initial;
+    }
   }
 
   .explanation {
-    width: 70vw;
-    font-size: 4vw;
-    margin-top: 0px;
+    width: 90vw;
+    font-size: 3vw;
+    margin-top: 40vw;
+  }
+
+  .explanation > p:nth-child(1) {
+    width: 44%;
+  }
+
+  .explanation > p:nth-child(2) {
+    width: 46%;
   }
 
   .creadores_desktop {
+    position: absolute;
+    bottom: 0;
+    left: 0.5vw;
+    display: flex;
+    align-items: flex-end;
+    width: 99vw;
+    height: 20vh;
+  }
+  
+  .creadores_desktop > * {
+    width: 33%;
+  }
+
+  .creadores_desktop > div:nth-child(2) {
+    align-self: flex-start;
+  }
+
+  .creadores_desktop > .carlos {
+    font-size: 3vw;
+  }
+
+  .creadores_desktop > .supreme {
+    font-size: 3vw;
+  }
+}
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .proximamente {
+    font-size: 3vw;
+    letter-spacing: 3.5px;
+    margin-top: 200px;
+  }
+
+  .title_cards {
+    width: 94vw;
+    height: 60vw;
+    position: relative;
+  }
+
+  .title {
+    width: 90vw;
+    font-size: 14vw;
+    margin-top: 0px;
+    margin-bottom: 3vw;
+    line-height: 1;
+    letter-spacing: -2px;
+    left: -1vw;
+  }
+
+  .cards {
+    width: 100vw;
+  }
+
+  .card {
+    width: 30%;
+    border-radius: 10px;
+    position: absolute;
+    animation: marginCard 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .card:nth-child(1) {
+    margin-left: 8vw;
+  }
+  .card:nth-child(2) {
+    margin-left: 4vw;
+  }
+  .card:nth-child(3) {
+    margin-left: 1vw;
+  }
+
+  .card:nth-child(5) {
+    margin-right: 6vw;
+  }
+  .card:nth-child(6) {
+    margin-right: 12vw;
+  }
+  .card:nth-child(7) {
+    margin-right: 20vw;
+  }
+
+  @keyframes marginCard {
+    0% {
+      margin: 0;
+    }
+    99% {
+      margin: 0;
+    }
+    100% {
+      margin: initial;
+    }
+  }
+
+  .explanation {
+    width: 90vw;
+    font-size: 2.5vw;
+    margin-top: 135px;
+  }
+
+  .explanation > p:nth-child(1) {
+    width: 44%;
+  }
+
+  .explanation > p:nth-child(2) {
+    width: 52%;
+  }
+
+  .explanation > p:nth-child(2) > br {
     display: none;
   }
 
-  .creadores_mobile {
+  .creadores_desktop {
     position: absolute;
-    bottom: 5px;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 45vw;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-
-  .creadores_mobile .jimena {
-    width: 100vw;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-align: center;
-  }
-
-  .creadores_mobile > div {
-    width: 100vw;
+    bottom: 0;
+    left: 0.5vw;
     display: flex;
     align-items: flex-end;
-    justify-content: space-between;
+    width: 99vw;
+    height: 23vw;
+  }
+  
+  .creadores_desktop > * {
+    width: 33%;
   }
 
-  .creadores_mobile .carlos {
-    font-size: 12px;
-    margin-right: 5vw;
-    text-align: end;
+  .creadores_desktop > div:nth-child(2) {
+    align-self: flex-start;
   }
 
-  .creadores_mobile .supreme {
-    font-size: 12px;
-    margin-left: 5vw;
+  .creadores_desktop > div:nth-child(2) > * {
+    font-size: 2.5vw;
+  }
+
+  .creadores_desktop > .carlos {
+    font-size: 2.5vw;
+  }
+
+  .creadores_desktop > .supreme {
+    font-size: 2.5vw;
   }
 }
