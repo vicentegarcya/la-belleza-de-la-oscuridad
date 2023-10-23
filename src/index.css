@@ -7,14 +7,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
   max-width: 100%;
   overflow-x: hidden;
-  cursor: none;
+  cursor: url('./images/cursor_46.png') 23 23, auto;
+}
+
+html {
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
   display: none;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
