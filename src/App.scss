@@ -303,7 +303,7 @@
     font-size: 14vw;
     line-height: 1;
     letter-spacing: -2px;
-    left: -1vw;
+    left: 2px;
   }
 
   .cards {
@@ -314,7 +314,7 @@
   }
 
   .card {
-    width: 30%;
+    width: 27%;
     border-radius: 10px;
     position: absolute;
     animation: marginCard 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -372,8 +372,8 @@
     left: 0.5vw;
     display: flex;
     align-items: flex-end;
-    width: 99vw;
-    height: 18dvh;
+    width: 98vw;
+    height: 17dvh;
   }
 
   .creadores_desktop > * {
@@ -394,6 +394,7 @@
 
   .creadores_desktop > .supreme {
     font-size: 3vw;
+    margin-left: 3vw;
   }
 }
 
