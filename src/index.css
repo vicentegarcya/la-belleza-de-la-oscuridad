@@ -10,10 +10,6 @@ body {
   cursor: url('./images/cursor_46.png') 23 23, auto;
 }
 
-html {
-  overflow: hidden;
-}
-
 ::-webkit-scrollbar {
   display: none;
 }
