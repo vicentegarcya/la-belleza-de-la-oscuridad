@@ -69,13 +69,6 @@ function App() {
           Un proyecto del<br></br>ecosistema SPRM BNGS
         </p>
         <div>
-          <a
-            href="mailto:contacto@labellezadelaoscuridad.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            contacto@labellezadelaoscuridad.com
-          </a>
           <p className="jimena">JIMENA GONZALEZ</p>
         </div>
         <p className="carlos">

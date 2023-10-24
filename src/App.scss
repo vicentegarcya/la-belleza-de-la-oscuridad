@@ -288,14 +288,14 @@
   .proximamente {
     font-size: 3vw;
     letter-spacing: 3.5px;
-    margin-top: 23dvh;
+    margin-top: 14dvh;
   }
 
   .title_cards {
     width: 94vw;
     height: 26dvh;
     position: relative;
-    margin-top: 2dvh;
+    margin-top: 12dvh;
   }
 
   .title {
@@ -398,15 +398,19 @@
   .explanation {
     width: 90vw;
     font-size: 3vw;
-    margin-top: 16dvh;
+    margin-top: 10dvh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .explanation > p:nth-child(1) {
-    width: 44%;
+    width: 55%;
+    text-align: center;
   }
 
   .explanation > p:nth-child(2) {
-    width: 46%;
+    display: none;
   }
 
   .creadores_desktop {
@@ -416,7 +420,7 @@
     display: flex;
     align-items: flex-end;
     width: 98vw;
-    height: 17dvh;
+    height: 20dvh;
   }
 
   .creadores_desktop > * {
@@ -432,11 +436,11 @@
   }
 
   .creadores_desktop > .carlos {
-    font-size: 3vw;
+    font-size: 2.65vw;
   }
 
   .creadores_desktop > .supreme {
-    font-size: 3vw;
+    font-size: 2.65vw;
     margin-left: 3vw;
   }
 }
