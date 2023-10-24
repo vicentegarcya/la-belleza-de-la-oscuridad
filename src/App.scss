@@ -307,7 +307,7 @@
   }
 
   .cards {
-    width: 100vw;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -317,39 +317,82 @@
     width: 27%;
     border-radius: 10px;
     position: absolute;
-    animation: marginCard 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  @keyframes card1mobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-33.5vw);
+    }
+  }
+  @keyframes card2mobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-23.5vw);
+    }
+  }
+  @keyframes card3mobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-11.5vw);
+    }
+  }
+
+  @keyframes card5mobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(11.5vw);
+    }
+  }
+  @keyframes card6mobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(23.5vw);
+    }
+  }
+  @keyframes card7mobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(33.5vw);
+    }
   }
 
   .card:nth-child(1) {
-    margin-left: 8vw;
+    transform: translateX(-33.5vw);
+    animation: card1mobile 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   .card:nth-child(2) {
-    margin-left: 4vw;
+    transform: translateX(-23.5vw);
+    animation: card2mobile 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   .card:nth-child(3) {
-    margin-left: 1vw;
+    transform: translateX(-11.5vw);
+    animation: card3mobile 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .card:nth-child(5) {
-    margin-right: 6vw;
+    transform: translateX(11.5vw);
+    animation: card5mobile 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   .card:nth-child(6) {
-    margin-right: 12vw;
+    transform: translateX(23.5vw);
+    animation: card6mobile 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   .card:nth-child(7) {
-    margin-right: 20vw;
-  }
-
-  @keyframes marginCard {
-    0% {
-      margin: 0;
-    }
-    99% {
-      margin: 0;
-    }
-    100% {
-      margin: initial;
-    }
+    transform: translateX(33.5vw);
+    animation: card7mobile 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .explanation {
