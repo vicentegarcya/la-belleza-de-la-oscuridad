@@ -16,15 +16,14 @@ function App() {
   const cardsRef = useRef();
   const fakeScrollRef = useRef();
 
-  const [text, setText] = useState(`La belleza de la oscuridad`);
+  const [text, setText] = useState(`title`);
 
   useEffect(() => {
     fakeScrollRef.current.addEventListener("scroll", () => {
-      console.log(fakeScrollRef.current.scrollTop > 0);
       if (fakeScrollRef.current.scrollTop > 0) {
-        setText("Contacto");
+        setText("contacto");
       } else {
-        setText("La Belleza de la Oscuridad");
+        setText("title");
       }
     });
 
@@ -99,9 +98,17 @@ function App() {
           className="title hidden"
           href="mailto:contacto@labellezadelaoscuridad.com"
         >
-          {text.split(" ").slice(0, 2).join(" ")}
-          <br></br>
-          {text.split(" ").slice(2).join(" ")}
+          {text === "title" ? (
+            <>
+              La belleza<br></br> de la oscuridad
+            </>
+          ) : (
+            <div className="title_contacto">
+              <p>
+                contacto@labellezadelaoscuridad.com
+              </p>
+            </div>
+          )}
         </a>
       </div>
       <div className="footer">
@@ -116,7 +123,11 @@ function App() {
             Arte por<br></br>Carlos Fama
           </p>
         </div>
-        <p>* El arte de esta página es una muestra ilustrativa. Las ilustraciones de la baraja reflejarán una mayor diversidad étnica y racial, corporal y de género.</p>
+        <p>
+          * El arte de esta página es una muestra ilustrativa. Las ilustraciones
+          de la baraja reflejarán una mayor diversidad étnica y racial, corporal
+          y de género.
+        </p>
       </div>
       <div ref={fakeScrollRef} className="fake_scroll">
         <div></div>
