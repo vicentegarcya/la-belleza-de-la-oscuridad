@@ -114,7 +114,7 @@ function App() {
       <div className="footer">
         <div ref={creadoresRef} className="creadores_desktop hidden">
           <p className="supreme">
-            Un proyecto del<br></br>ecosistema SPRM BNGS
+            Web por<br></br>Vicente Garcya
           </p>
           <div>
             <p className="jimena">JIMENA GONZALEZ</p>
